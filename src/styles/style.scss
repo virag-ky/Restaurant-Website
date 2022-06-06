@@ -1,5 +1,43 @@
-body {
-  background: url('../images/section_bg.jpg');
+@import 'base';
+
+nav {
+  position: absolute;
+}
+
+i.fa-bars {
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  font-size: 2rem;
+}
+
+#content {
+  height: 100vh;
+}
+
+section#home-page {
+  background: url('../images/section_bg5.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left;
+  height: 100%;
+  padding: 25px;
+
+  h1 {
+    position: absolute;
+    top: 20%;
+    font-size: 2.8rem;
+    color: rgb(255, 94, 0);
+  }
+
+  p#welcome {
+    position: absolute;
+    top: 30%;
+    font-size: 1.4rem;
+    width: 90%;
+  }
+}
+
+.hide {
+  display: none;
 }
