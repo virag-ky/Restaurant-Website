@@ -1,6 +1,49 @@
-body {
-  background: url("../images/section_bg.jpg");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  position: absolute;
+}
+
+i.fa-bars {
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  font-size: 2rem;
+}
+
+#content {
+  height: 100vh;
+}
+
+section#home-page {
+  background: url("../images/section_bg5.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left;
+  height: 100%;
+  padding: 25px;
+}
+
+section#home-page h1 {
+  position: absolute;
+  top: 20%;
+  font-size: 2.8rem;
+  color: #ff5e00;
+}
+
+section#home-page p#welcome {
+  position: absolute;
+  top: 30%;
+  font-size: 1.4rem;
+  width: 90%;
+}
+
+.hide {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
