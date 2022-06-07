@@ -1,7 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Vollkorn&display=swap');
+
+$base_color1: rgb(255, 94, 0);
+$font1: 'Open Sans', sans-serif;
+$font2: 'Vollkorn', serif;
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: $font1;
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

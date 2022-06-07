@@ -1,7 +1,32 @@
 @import 'base';
 
 nav {
+  @include center;
+
   position: absolute;
+  background: rgba(250, 250, 250, .6);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  z-index: 99;
+
+  ul {
+    @include center;
+
+    flex-direction: column;
+    gap: 50px;
+
+    li {
+      list-style: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+      &:hover {
+        color: $base_color1;
+      }
+    }
+  }
 }
 
 i.fa-bars {
@@ -15,6 +40,8 @@ i.fa-times {
   @extend .fa-bars;
 
   font-size: 1.8rem;
+  color: $base_color1;
+  z-index: 99;
 }
 
 #content {
@@ -33,13 +60,15 @@ section#home-page {
     position: absolute;
     top: 20%;
     font-size: 2.8rem;
-    color: rgb(255, 94, 0);
+    color: $base_color1;
+    font-family: $font2;
   }
 
   p#welcome {
     position: absolute;
     top: 30%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+    font-style: italic;
     width: 90%;
   }
 }
