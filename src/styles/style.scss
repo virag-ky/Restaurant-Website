@@ -11,6 +11,12 @@ i.fa-bars {
   font-size: 2rem;
 }
 
+i.fa-times {
+  @extend .fa-bars;
+
+  font-size: 1.8rem;
+}
+
 #content {
   height: 100vh;
 }

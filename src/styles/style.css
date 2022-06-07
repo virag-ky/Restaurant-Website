@@ -11,11 +11,15 @@ nav {
   position: absolute;
 }
 
-i.fa-bars {
+i.fa-bars, i.fa-times {
   position: absolute;
   top: 3%;
   right: 6%;
   font-size: 2rem;
+}
+
+i.fa-times {
+  font-size: 1.8rem;
 }
 
 #content {
