@@ -105,22 +105,63 @@ section#home-page p#welcome {
   width: 90%;
 }
 
+section#menu-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0;
+  background: url("../images/section_bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section#menu-section h2 {
+  font-size: 2.2rem;
+  font-family: "Vollkorn", serif;
+  font-weight: normal;
+}
+
+section#menu-section #selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+}
+
 section#menu-section #selection select {
-  /* styling */
   background-color: white;
-  border: thin solid blue;
+  border: thin solid #ff5e00;
   border-radius: 4px;
   display: inline-block;
   font: inherit;
   line-height: 1.5em;
   padding: 0.5em 3.5em 0.5em 1em;
-  /* reset */
-  margin: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, blue 50%), linear-gradient(135deg, blue 50%, transparent 50%), linear-gradient(to right, skyblue, skyblue);
+  background-image: linear-gradient(45deg, transparent 50%, #ff5e00 50%), linear-gradient(135deg, #ff5e00 50%, transparent 50%), linear-gradient(to right, #e6b892, #e6b892);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
   background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
   background-repeat: no-repeat;
@@ -138,17 +179,10 @@ section#menu-section #selection select:focus {
 section#menu-section .meals {
   width: 200px;
   height: 200px;
-  /*  
-		 * Rating styles
-		 */
 }
 
 section#menu-section .meals .meal-name {
   visibility: hidden;
-}
-
-section#menu-section .meals:hover .meal-name {
-  visibility: visible;
 }
 
 section#menu-section .meals a[href*="intent"] {
@@ -157,20 +191,14 @@ section#menu-section .meals a[href*="intent"] {
 }
 
 section#menu-section .meals .rating {
-  width: 226px;
+  visibility: hidden;
+  width: 100%;
   margin: 0 auto 1em;
-  font-size: 45px;
+  font-size: 35px;
   overflow: hidden;
 }
 
-section#menu-section .meals .rating input {
-  float: right;
-  opacity: 0;
-  position: absolute;
-}
-
-section#menu-section .meals .rating a,
-section#menu-section .meals .rating label {
+section#menu-section .meals .rating a {
   float: right;
   color: #aaa;
   text-decoration: none;
@@ -178,22 +206,15 @@ section#menu-section .meals .rating label {
   transition: color .4s;
 }
 
-section#menu-section .meals .rating label:hover ~ label,
-section#menu-section .meals .rating input:focus ~ label,
-section#menu-section .meals .rating label:hover,
 section#menu-section .meals .rating a:hover,
 section#menu-section .meals .rating a:hover ~ a,
 section#menu-section .meals .rating a:focus,
 section#menu-section .meals .rating a:focus ~ a {
-  color: orange;
+  color: #ffee00;
   cursor: pointer;
 }
 
-section#menu-section .meals .rating2 {
-  direction: rtl;
-}
-
-section#menu-section .meals .rating2 a {
-  float: none;
+section#menu-section .meals:hover .meal-name, section#menu-section .meals:hover .rating {
+  visibility: visible;
 }
 /*# sourceMappingURL=style.css.map */

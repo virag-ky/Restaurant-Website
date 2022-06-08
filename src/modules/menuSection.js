@@ -79,6 +79,8 @@ const getMenu = (category) => {
           </div>
         `;
         meal.style.background = `url(${item.strMealThumb})`;
+        meal.style.backgroundPosition = "center";
+        meal.style.backgroundSize = "cover";
         menuItemsContainer.appendChild(meal);
       });
     })

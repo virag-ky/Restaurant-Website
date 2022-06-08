@@ -78,21 +78,35 @@ section#home-page {
 }
 
 section#menu-section {
-  #selection {
-    select {
+  @include center;
 
-      /* styling */
+  flex-direction: column;
+  padding: 30px 0;
+  background: url('../images/section_bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  h2 {
+    font-size: 2.2rem;
+    font-family: $font2;
+    font-weight: normal;
+  }
+
+  #selection {
+    @include center;
+
+    flex-direction: column;
+    margin-top: 30px;
+
+    select {
       background-color: white;
-      border: thin solid blue;
+      border: thin solid $base_color1;
       border-radius: 4px;
       display: inline-block;
       font: inherit;
       line-height: 1.5em;
-      padding: 0.5em 3.5em 0.5em 1em;
-    
-      /* reset */
-    
-      margin: 0;      
+      padding: 0.5em 3.5em 0.5em 1em;   
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -100,9 +114,9 @@ section#menu-section {
       -moz-appearance: none;
 
       background-image:
-        linear-gradient(45deg, transparent 50%, blue 50%),
-        linear-gradient(135deg, blue 50%, transparent 50%),
-        linear-gradient(to right, skyblue, skyblue);
+        linear-gradient(45deg, transparent 50%, $base_color1 50%),
+        linear-gradient(135deg, $base_color1 50%, transparent 50%),
+        linear-gradient(to right, rgb(230, 184, 146), rgb(230, 184, 146));
       background-position:
         calc(100% - 20px) calc(1em + 2px),
         calc(100% - 15px) calc(1em + 2px),
@@ -136,15 +150,9 @@ section#menu-section {
   .meals {
     width: 200px;
     height: 200px;
-
+    
     .meal-name {
       visibility: hidden;
-    }
-
-    &:hover {
-      .meal-name {
-        visibility: visible;
-      }
     }
 
     a[href*="intent"] {
@@ -152,22 +160,14 @@ section#menu-section {
 			margin-top: 0.4em;
 		}
 
-		/*  
-		 * Rating styles
-		 */
 		.rating {
-			width: 226px;
+      visibility: hidden;
+			width: 100%;
 			margin: 0 auto 1em;
-			font-size: 45px;
+			font-size: 35px;
 			overflow:hidden;
-		}
-.rating input {
-  float: right;
-  opacity: 0;
-  position: absolute;
-}
-		.rating a,
-    .rating label {
+
+      a {
 			float:right;
 			color: #aaa;
 			text-decoration: none;
@@ -176,22 +176,21 @@ section#menu-section {
 			-o-transition: color .4s;
 			transition: color .4s;
 		}
-.rating label:hover ~ label,
-.rating input:focus ~ label,
-.rating label:hover,
-		.rating a:hover,
-		.rating a:hover ~ a,
-		.rating a:focus,
-		.rating a:focus ~ a		{
-			color: orange;
+
+      a:hover,
+      a:hover ~ a,
+      a:focus, 
+      a:focus ~ a		{
+			color: rgb(255, 238, 0);
 			cursor: pointer;
 		}
-		.rating2 {
-			direction: rtl;
+
 		}
-		.rating2 a {
-			float:none
-		}
+    &:hover {
+      .meal-name, .rating {
+        visibility: visible;
+      }
+    }
   }
 }
 
