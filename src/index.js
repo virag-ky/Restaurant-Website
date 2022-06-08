@@ -1,12 +1,13 @@
 import "./styles/style.scss";
 import createHomePage from "./modules/homepage.js";
 import createNavBar from "./modules/navBar.js";
-import createMenuSection from "./modules/menuSection.js";
+import { createMenuSection, getMenu } from "./modules/menuSection.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   createNavBar();
   createHomePage();
   createMenuSection();
+  getMenu("Vegan");
 
   const homePage = document.getElementById("home-page");
   homePage.classList.remove("hide");

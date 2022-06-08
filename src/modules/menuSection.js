@@ -1,3 +1,5 @@
+let category;
+
 const createMenuSection = () => {
   const menuSection = document.createElement("section");
   menuSection.classList.add("hide");
@@ -5,16 +7,49 @@ const createMenuSection = () => {
   menuSection.innerHTML = `<h2>Menu</h2>
   <div id="selection">
   <select>
-    <option value="0">Vegan</option>
-    <option value="1">Pasta</option>
-    <option value="2">Seafood</option>
-    <option value="3">Chicken</option>
-    <option value="4">Breakfast</option>
+    <option value="vegan">Vegan</option>
+    <option value="pasta">Pasta</option>
+    <option value="seafood">Seafood</option>
+    <option value="chicken">Chicken</option>
+    <option value="breakfast">Breakfast</option>
   </select>
 </div>
   `;
+  document.getElementById("content").appendChild(menuSection);
 
-  fetch("https://themealdb.com/api/json/v1/1/filter.php?c=Breakfast")
+  const selection = document.querySelector("select");
+  selection.addEventListener("change", (e) => {
+    switch (e.target.value) {
+      case "vegan":
+        category = "Vegan";
+        getMenu(category);
+        break;
+      case "pasta":
+        category = "Pasta";
+        getMenu(category);
+        break;
+      case "seafood":
+        category = "Seafood";
+        getMenu(category);
+        break;
+      case "chicken":
+        category = "Chicken";
+        getMenu(category);
+        break;
+      case "breakfast":
+        category = "Breakfast";
+        getMenu(category);
+        break;
+      default:
+        category = "Vegan";
+        getMenu(category);
+        break;
+    }
+  });
+};
+
+const getMenu = (category) => {
+  fetch(`https://themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -22,8 +57,6 @@ const createMenuSection = () => {
     .catch((err) => {
       console.log(err);
     });
-
-  document.getElementById("content").appendChild(menuSection);
 };
 
-export default createMenuSection;
+export { createMenuSection, getMenu };
