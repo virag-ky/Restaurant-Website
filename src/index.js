@@ -12,7 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
   homePage.classList.remove("hide");
 
   const menuSection = document.getElementById("menu-section");
-
   const navBar = document.querySelector("nav");
   const exitBtn = document.querySelector(".fa-times");
   const hamburgerMenu = document.querySelector(".fa-bars");
