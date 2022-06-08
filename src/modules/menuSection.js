@@ -60,7 +60,6 @@ const getMenu = (category) => {
   fetch(`https://themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data.meals);
       data.meals.length > 8
         ? (data.meals = data.meals.splice(0, 8))
         : data.meals;
@@ -70,7 +69,15 @@ const getMenu = (category) => {
       data.meals.forEach((item) => {
         const meal = document.createElement("div");
         meal.classList.add("meals");
-        meal.innerHTML = `<h2>${item.strMeal}</h2>`;
+        meal.innerHTML = `<h2 class="meal-name">${item.strMeal}</h2>
+          <div class="rating">
+          <a href="#5" title="Give 5 stars">★</a>
+          <a href="#4" title="Give 4 stars">★</a>
+          <a href="#3" title="Give 3 stars">★</a>
+          <a href="#2" title="Give 2 stars">★</a>
+          <a href="#1" title="Give 1 star">★</a>
+          </div>
+        `;
         meal.style.background = `url(${item.strMealThumb})`;
         menuItemsContainer.appendChild(meal);
       });

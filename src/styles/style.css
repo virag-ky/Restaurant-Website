@@ -138,5 +138,62 @@ section#menu-section #selection select:focus {
 section#menu-section .meals {
   width: 200px;
   height: 200px;
+  /*  
+		 * Rating styles
+		 */
+}
+
+section#menu-section .meals .meal-name {
+  visibility: hidden;
+}
+
+section#menu-section .meals:hover .meal-name {
+  visibility: visible;
+}
+
+section#menu-section .meals a[href*="intent"] {
+  display: inline-block;
+  margin-top: 0.4em;
+}
+
+section#menu-section .meals .rating {
+  width: 226px;
+  margin: 0 auto 1em;
+  font-size: 45px;
+  overflow: hidden;
+}
+
+section#menu-section .meals .rating input {
+  float: right;
+  opacity: 0;
+  position: absolute;
+}
+
+section#menu-section .meals .rating a,
+section#menu-section .meals .rating label {
+  float: right;
+  color: #aaa;
+  text-decoration: none;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}
+
+section#menu-section .meals .rating label:hover ~ label,
+section#menu-section .meals .rating input:focus ~ label,
+section#menu-section .meals .rating label:hover,
+section#menu-section .meals .rating a:hover,
+section#menu-section .meals .rating a:hover ~ a,
+section#menu-section .meals .rating a:focus,
+section#menu-section .meals .rating a:focus ~ a {
+  color: orange;
+  cursor: pointer;
+}
+
+section#menu-section .meals .rating2 {
+  direction: rtl;
+}
+
+section#menu-section .meals .rating2 a {
+  float: none;
 }
 /*# sourceMappingURL=style.css.map */
