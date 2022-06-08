@@ -52,7 +52,10 @@ const getMenu = (category) => {
   fetch(`https://themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      console.log(data.meals.length);
+      data.meals.length > 8
+        ? (data.meals = data.meals.splice(0, 8))
+        : data.meals;
     })
     .catch((err) => {
       console.log(err);
