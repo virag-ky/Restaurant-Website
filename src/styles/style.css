@@ -258,13 +258,13 @@ section#menu-section #menu-items .meals:hover .rating a {
   float: right;
   color: #fff;
   text-decoration: none;
-  -webkit-transition: color .4s;
-  transition: color .4s;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
 }
 
 section#menu-section #menu-items .meals:hover .rating a:hover,
-section#menu-section #menu-items .meals:hover .rating a:hover ~ a,
 section#menu-section #menu-items .meals:hover .rating a:focus,
+section#menu-section #menu-items .meals:hover .rating a:hover ~ a,
 section#menu-section #menu-items .meals:hover .rating a:focus ~ a {
   color: #fdec00;
   cursor: pointer;

@@ -106,13 +106,12 @@ section#menu-section {
       display: inline-block;
       font: inherit;
       line-height: 1.5em;
-      padding: 0.5em 3.5em 0.5em 1em;   
+      padding: 0.5em 3.5em 0.5em 1em;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       -webkit-appearance: none;
       -moz-appearance: none;
-
       background-image:
         linear-gradient(45deg, transparent 50%, $base_color1 50%),
         linear-gradient(135deg, $base_color1 50%, transparent 50%),
@@ -127,7 +126,7 @@ section#menu-section {
         2.5em 2.5em;
       background-repeat: no-repeat;
     }
-    
+
     select:focus {
       background-image:
         linear-gradient(45deg, white 50%, transparent 50%),
@@ -154,86 +153,84 @@ section#menu-section {
     gap: 25px;
     margin-top: 50px;
 
-  .meals {
-    width: 280px;
-    height: 280px;
-    position: relative;
-    border-radius: 20px;
+    .meals {
+      width: 280px;
+      height: 280px;
+      position: relative;
+      border-radius: 20px;
 
-    .blur-div {
-      visibility: hidden;
-    }
-    
-    .meal-name {
-      visibility: hidden;
-      font-size: 1.8rem;
-    }
+      .blur-div {
+        visibility: hidden;
+      }
 
-	 .rating {
-      visibility: hidden;
-    }
-	
-    &:hover {
       .meal-name {
-        visibility: visible;
-        position: absolute;
-        z-index: 99;
-        top: 10%;
-        width: 100%;
-        padding: 0 3px;
-        text-align: center;
+        visibility: hidden;
+        font-size: 1.8rem;
       }
 
       .rating {
-        @include center;
+        visibility: hidden;
+      }
 
-        flex-direction: row-reverse;
-        
+      &:hover {
+        .meal-name {
+          visibility: visible;
+          position: absolute;
+          z-index: 99;
+          top: 10%;
+          width: 100%;
+          padding: 0 3px;
+          text-align: center;
+        }
+
+        .rating {
+          @include center;
+
+          flex-direction: row-reverse;
           visibility: visible;
           width: 100%;
           margin: 0 auto 1em;
           font-size: 35px;
-          overflow:hidden;
+          overflow: hidden;
           float: right;
           position: absolute;
           top: 50%;
           z-index: 99;
 
           a[href*="intent"] {
-            display:inline-block;
+            display: inline-block;
             margin-top: 0.4em;
           }
-    
-          a {
-          float:right;
-          color: #fff;
-          text-decoration: none;
-          -webkit-transition: color .4s;
-          -moz-transition: color .4s;
-          -o-transition: color .4s;
-          transition: color .4s;
-        }
-    
-          a:hover,
-          a:hover ~ a,
-          a:focus, 
-          a:focus ~ a		{
-          color: rgb(253, 236, 0);
-          cursor: pointer;
-        }
-      }
 
-      .blur-div {
-        visibility: visible;
-        position: absolute;
-        top: 0;
-        background: rgba(230, 184, 146, .8);
-        height: 100%;
-        width: 100%;
-        border-radius: 20px;
+          a {
+            float: right;
+            color: #fff;
+            text-decoration: none;
+            -webkit-transition: color 0.4s;
+            -moz-transition: color 0.4s;
+            -o-transition: color 0.4s;
+            transition: color 0.4s;
+          }
+
+          a:hover,
+          a:focus,
+          a:hover ~ a,
+          a:focus ~ a {
+            color: rgb(253, 236, 0);
+            cursor: pointer;
+          }
+        }
+
+        .blur-div {
+          visibility: visible;
+          position: absolute;
+          top: 0;
+          background: rgba(230, 184, 146, 0.8);
+          height: 100%;
+          width: 100%;
+          border-radius: 20px;
+        }
       }
     }
   }
 }
-}
-
