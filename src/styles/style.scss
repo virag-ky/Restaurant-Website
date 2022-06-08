@@ -81,7 +81,7 @@ section#menu-section {
   @include center;
 
   flex-direction: column;
-  padding: 30px 0;
+  padding: 80px 0;
   background: url('../images/section_bg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,7 +97,7 @@ section#menu-section {
     @include center;
 
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 50px;
 
     select {
       background-color: white;
@@ -147,50 +147,93 @@ section#menu-section {
     }
   }
 
+  #menu-items {
+    @include center;
+
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 50px;
+
   .meals {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    border-radius: 20px;
+
+    .blur-div {
+      visibility: hidden;
+    }
     
     .meal-name {
       visibility: hidden;
+      font-size: 1.8rem;
     }
 
-    a[href*="intent"] {
-			display:inline-block;
-			margin-top: 0.4em;
-		}
-
-		.rating {
+	 .rating {
       visibility: hidden;
-			width: 100%;
-			margin: 0 auto 1em;
-			font-size: 35px;
-			overflow:hidden;
-
-      a {
-			float:right;
-			color: #aaa;
-			text-decoration: none;
-			-webkit-transition: color .4s;
-			-moz-transition: color .4s;
-			-o-transition: color .4s;
-			transition: color .4s;
-		}
-
-      a:hover,
-      a:hover ~ a,
-      a:focus, 
-      a:focus ~ a		{
-			color: rgb(255, 238, 0);
-			cursor: pointer;
-		}
-
-		}
+    }
+	
     &:hover {
-      .meal-name, .rating {
+      .meal-name {
         visibility: visible;
+        position: absolute;
+        z-index: 99;
+        top: 10%;
+        width: 100%;
+        padding: 0 3px;
+        text-align: center;
+      }
+
+      .rating {
+        @include center;
+
+        flex-direction: row-reverse;
+        
+          visibility: visible;
+          width: 100%;
+          margin: 0 auto 1em;
+          font-size: 35px;
+          overflow:hidden;
+          float: right;
+          position: absolute;
+          top: 50%;
+          z-index: 99;
+
+          a[href*="intent"] {
+            display:inline-block;
+            margin-top: 0.4em;
+          }
+    
+          a {
+          float:right;
+          color: #fff;
+          text-decoration: none;
+          -webkit-transition: color .4s;
+          -moz-transition: color .4s;
+          -o-transition: color .4s;
+          transition: color .4s;
+        }
+    
+          a:hover,
+          a:hover ~ a,
+          a:focus, 
+          a:focus ~ a		{
+          color: rgb(253, 236, 0);
+          cursor: pointer;
+        }
+      }
+
+      .blur-div {
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        background: rgba(230, 184, 146, .8);
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
       }
     }
   }
+}
 }
 

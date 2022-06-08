@@ -119,7 +119,7 @@ section#menu-section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 30px 0;
+  padding: 80px 0;
   background: url("../images/section_bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,7 +146,7 @@ section#menu-section #selection {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 section#menu-section #selection select {
@@ -176,45 +176,107 @@ section#menu-section #selection select:focus {
   outline: 0;
 }
 
-section#menu-section .meals {
-  width: 200px;
-  height: 200px;
+section#menu-section #menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  margin-top: 50px;
 }
 
-section#menu-section .meals .meal-name {
+section#menu-section #menu-items .meals {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  border-radius: 20px;
+}
+
+section#menu-section #menu-items .meals .blur-div {
   visibility: hidden;
 }
 
-section#menu-section .meals a[href*="intent"] {
-  display: inline-block;
-  margin-top: 0.4em;
+section#menu-section #menu-items .meals .meal-name {
+  visibility: hidden;
+  font-size: 1.8rem;
 }
 
-section#menu-section .meals .rating {
+section#menu-section #menu-items .meals .rating {
   visibility: hidden;
+}
+
+section#menu-section #menu-items .meals:hover .meal-name {
+  visibility: visible;
+  position: absolute;
+  z-index: 99;
+  top: 10%;
+  width: 100%;
+  padding: 0 3px;
+  text-align: center;
+}
+
+section#menu-section #menu-items .meals:hover .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  visibility: visible;
   width: 100%;
   margin: 0 auto 1em;
   font-size: 35px;
   overflow: hidden;
+  float: right;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
 }
 
-section#menu-section .meals .rating a {
+section#menu-section #menu-items .meals:hover .rating a[href*="intent"] {
+  display: inline-block;
+  margin-top: 0.4em;
+}
+
+section#menu-section #menu-items .meals:hover .rating a {
   float: right;
-  color: #aaa;
+  color: #fff;
   text-decoration: none;
   -webkit-transition: color .4s;
   transition: color .4s;
 }
 
-section#menu-section .meals .rating a:hover,
-section#menu-section .meals .rating a:hover ~ a,
-section#menu-section .meals .rating a:focus,
-section#menu-section .meals .rating a:focus ~ a {
-  color: #ffee00;
+section#menu-section #menu-items .meals:hover .rating a:hover,
+section#menu-section #menu-items .meals:hover .rating a:hover ~ a,
+section#menu-section #menu-items .meals:hover .rating a:focus,
+section#menu-section #menu-items .meals:hover .rating a:focus ~ a {
+  color: #fdec00;
   cursor: pointer;
 }
 
-section#menu-section .meals:hover .meal-name, section#menu-section .meals:hover .rating {
+section#menu-section #menu-items .meals:hover .blur-div {
   visibility: visible;
+  position: absolute;
+  top: 0;
+  background: rgba(230, 184, 146, 0.8);
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */

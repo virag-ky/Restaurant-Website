@@ -77,6 +77,7 @@ const getMenu = (category) => {
           <a href="#2" title="Give 2 stars">★</a>
           <a href="#1" title="Give 1 star">★</a>
           </div>
+          <div class="blur-div"></div>
         `;
         meal.style.background = `url(${item.strMealThumb})`;
         meal.style.backgroundPosition = "center";
