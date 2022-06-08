@@ -12,6 +12,10 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.hide {
+  display: none;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -101,7 +105,178 @@ section#home-page p#welcome {
   width: 90%;
 }
 
-.hide {
-  display: none;
+section#menu-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 0;
+  background: url("../images/section_bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section#menu-section h2 {
+  font-size: 2.2rem;
+  font-family: "Vollkorn", serif;
+  font-weight: normal;
+}
+
+section#menu-section #selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 50px;
+}
+
+section#menu-section #selection select {
+  background-color: white;
+  border: thin solid #ff5e00;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #ff5e00 50%), linear-gradient(135deg, #ff5e00 50%, transparent 50%), linear-gradient(to right, #e6b892, #e6b892);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+section#menu-section #selection select:focus {
+  background-image: linear-gradient(45deg, white 50%, transparent 50%), linear-gradient(135deg, transparent 50%, white 50%), linear-gradient(to right, gray, gray);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, 100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+}
+
+section#menu-section #menu-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+section#menu-section #menu-items .meals {
+  width: 280px;
+  height: 280px;
+  position: relative;
+  border-radius: 20px;
+}
+
+section#menu-section #menu-items .meals .blur-div {
+  visibility: hidden;
+}
+
+section#menu-section #menu-items .meals .meal-name {
+  visibility: hidden;
+  font-size: 1.8rem;
+}
+
+section#menu-section #menu-items .meals .rating {
+  visibility: hidden;
+}
+
+section#menu-section #menu-items .meals:hover .meal-name {
+  visibility: visible;
+  position: absolute;
+  z-index: 99;
+  top: 10%;
+  width: 100%;
+  padding: 0 3px;
+  text-align: center;
+}
+
+section#menu-section #menu-items .meals:hover .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  visibility: visible;
+  width: 100%;
+  margin: 0 auto 1em;
+  font-size: 35px;
+  overflow: hidden;
+  float: right;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+}
+
+section#menu-section #menu-items .meals:hover .rating a[href*="intent"] {
+  display: inline-block;
+  margin-top: 0.4em;
+}
+
+section#menu-section #menu-items .meals:hover .rating a {
+  float: right;
+  color: #fff;
+  text-decoration: none;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+section#menu-section #menu-items .meals:hover .rating a:hover,
+section#menu-section #menu-items .meals:hover .rating a:focus,
+section#menu-section #menu-items .meals:hover .rating a:hover ~ a,
+section#menu-section #menu-items .meals:hover .rating a:focus ~ a {
+  color: #fdec00;
+  cursor: pointer;
+}
+
+section#menu-section #menu-items .meals:hover .blur-div {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  background: rgba(230, 184, 146, 0.8);
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
 /*# sourceMappingURL=style.css.map */
