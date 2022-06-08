@@ -134,4 +134,9 @@ section#menu-section #selection select:focus {
   border-color: grey;
   outline: 0;
 }
+
+section#menu-section .meals {
+  width: 200px;
+  height: 200px;
+}
 /*# sourceMappingURL=style.css.map */
