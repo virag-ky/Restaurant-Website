@@ -5,7 +5,7 @@ const createNavBar = () => {
   <li id="menu">Menu</li>
   <li id="contact">Contact</li>
 </ul>`;
-  nav.classList.add('hide');
+
   document.body.insertBefore(nav, document.getElementById('content'));
 
   const mobileMenu = document.createElement('i');
@@ -18,13 +18,13 @@ const createNavBar = () => {
   document.body.insertBefore(exitBtn, document.getElementById('content'));
 
   exitBtn.addEventListener('click', () => {
-    nav.classList.add('hide');
+    nav.style.visibility = 'hidden';
     mobileMenu.classList.remove('hide');
     exitBtn.classList.add('hide');
   });
 
   mobileMenu.addEventListener('click', () => {
-    nav.classList.remove('hide');
+    nav.style.visibility = 'visible';
     mobileMenu.classList.add('hide');
     exitBtn.classList.remove('hide');
   });
