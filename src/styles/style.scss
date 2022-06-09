@@ -234,6 +234,109 @@ section#menu-section {
 
 section#contact-page {
   @include section-bg;
+  @include center;
 
-  height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 80px;
+  padding: 80px 0;
+
+  h2 {
+    font-family: $font2;
+    font-size: 2.2rem;
+    font-weight: normal;
+  }
+
+  ul {
+    @include center;
+
+    flex-direction: column;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+
+    span {
+      color: $base_color1;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+
+  div {
+    @include center;
+
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: thin solid $base_color1;
+    margin: 30px 0;
+    width: 70%;
+  }
+
+  button {
+    border: none;
+    background: $base_color1;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 700;
+
+    &:hover {
+      cursor: pointer;
+      background: rgb(230, 184, 146);
+    }
+  }
+
+  footer {
+    @include center;
+
+    flex-direction: column;
+    border-top: thin solid rgb(133, 132, 132);
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  #slogan {
+
+    h2 {
+      color: $base_color1;
+      font-size: 2.6rem;
+    }
+
+    p {
+      font-style: italic;
+    }
+  }
+
+  ul#social-icons {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    padding-top: 20px;
+
+    li {
+      @include center;
+
+      border-radius: 50%;
+      border: thin solid $base_color1;
+      width: 40px;
+      height: 40px;
+
+      i {
+        color: $base_color1;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

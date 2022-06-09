@@ -20,17 +20,18 @@ const createContactPage = () => {
     </ul>
   </div>
   <div id="subscribe">
-    <h2>Subscribe Newsletter</h2>
+    <h2>Subscribe</h2>
+    <h2>Newsletter</h2>
     <input type="email" placeholder="Email">
     <button id="submit">Subscribe</button>
   </div>
   <footer>
-    <p>2022 <i class="far fa-copyright"></i> Fresh Cuisine | Powered by Fresh Life</p>
+    <p>2022 <i class="fa fa-copyright"></i> Fresh Cuisine | Powered by Fresh Life</p>
     <ul id="social-icons">
-      <i><i class="fa fa-facebook"></i></i>
-      <i><i class="fa fa-twitter"></i></i>
-      <i><i class="fa fa-linkedin"></i></i>
-      <i><i class="fa fa-instagram"></i></i>
+      <li><i class="fa fa-facebook"></i></li>
+      <li><i class="fa fa-twitter"></i></li>
+      <li><i class="fa fa-linkedin"></i></li>
+      <li><i class="fa fa-instagram"></i></li>
     </ul>
   </footer>
   `;
