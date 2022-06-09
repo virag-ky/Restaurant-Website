@@ -21,3 +21,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+@mixin section-bg {
+  background: url('../images/section_bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
