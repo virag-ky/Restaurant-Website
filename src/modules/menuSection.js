@@ -39,10 +39,14 @@ const createMenuSection = () => {
   <div id="selection">
   <select>
     <option value="vegan">Vegan</option>
+    <option value="starter">Starter</option>
+    <option value="side">Side</option>
     <option value="pasta">Pasta</option>
     <option value="seafood">Seafood</option>
     <option value="chicken">Chicken</option>
     <option value="breakfast">Breakfast</option>
+    <option value="vegetarian">Vegetarian</option>
+    <option value="dessert">Dessert</option>
   </select>
   <div id="menu-items"></div>
 </div>
@@ -76,6 +80,26 @@ const createMenuSection = () => {
       case "breakfast":
         menuItemsContainer.innerHTML = "";
         category = "Breakfast";
+        getMenu(category);
+        break;
+      case "starter":
+        menuItemsContainer.innerHTML = "";
+        category = "Starter";
+        getMenu(category);
+        break;
+      case "side":
+        menuItemsContainer.innerHTML = "";
+        category = "Side";
+        getMenu(category);
+        break;
+      case "vegetarian":
+        menuItemsContainer.innerHTML = "";
+        category = "Vegetarian";
+        getMenu(category);
+        break;
+      case "dessert":
+        menuItemsContainer.innerHTML = "";
+        category = "Dessert";
         getMenu(category);
         break;
       default:
