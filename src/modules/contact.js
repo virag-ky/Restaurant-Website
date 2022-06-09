@@ -1,6 +1,6 @@
 const createContactPage = () => {
-  const contactPage = document.createElement("section");
-  contactPage.setAttribute("id", "contact-page");
+  const contactPage = document.createElement('section');
+  contactPage.setAttribute('id', 'contact-page');
   contactPage.innerHTML = `<div id="slogan"><h2>Fresh Cuisine</h2>
   <p>Fresh food. Fresh ideas.</p></div>
   <div id="opening-hours">
@@ -35,7 +35,7 @@ const createContactPage = () => {
     </ul>
   </footer>
   `;
-  document.getElementById("content").appendChild(contactPage);
+  document.getElementById('content').appendChild(contactPage);
 };
 
 export default createContactPage;

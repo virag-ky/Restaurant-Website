@@ -8,11 +8,11 @@ const getMenu = (category) => {
         data.meals = data.meals.splice(0, 8);
       }
 
-      const menuItemsContainer = document.getElementById("menu-items");
+      const menuItemsContainer = document.getElementById('menu-items');
 
       data.meals.forEach((item) => {
-        const meal = document.createElement("div");
-        meal.classList.add("meals");
+        const meal = document.createElement('div');
+        meal.classList.add('meals');
         meal.innerHTML = `<h2 class="meal-name">${item.strMeal}</h2>
           <div class="rating">
           <a href="#5" title="Give 5 stars">★</a>
@@ -24,8 +24,8 @@ const getMenu = (category) => {
           <div class="blur-div"></div>
         `;
         meal.style.background = `url(${item.strMealThumb})`;
-        meal.style.backgroundPosition = "center";
-        meal.style.backgroundSize = "cover";
+        meal.style.backgroundPosition = 'center';
+        meal.style.backgroundSize = 'cover';
         menuItemsContainer.appendChild(meal);
       });
     })
@@ -33,8 +33,8 @@ const getMenu = (category) => {
 };
 
 const createMenuSection = () => {
-  const menuSection = document.createElement("section");
-  menuSection.setAttribute("id", "menu-section");
+  const menuSection = document.createElement('section');
+  menuSection.setAttribute('id', 'menu-section');
   menuSection.innerHTML = `<h2>Menu</h2>
   <div id="selection">
   <select>
@@ -51,60 +51,60 @@ const createMenuSection = () => {
   <div id="menu-items"></div>
 </div>
   `;
-  document.getElementById("content").appendChild(menuSection);
-  const menuItemsContainer = document.getElementById("menu-items");
+  document.getElementById('content').appendChild(menuSection);
+  const menuItemsContainer = document.getElementById('menu-items');
 
-  const selection = document.querySelector("select");
-  selection.addEventListener("change", (e) => {
+  const selection = document.querySelector('select');
+  selection.addEventListener('change', (e) => {
     switch (e.target.value) {
-      case "vegan":
-        menuItemsContainer.innerHTML = "";
-        category = "Vegan";
+      case 'vegan':
+        menuItemsContainer.innerHTML = '';
+        category = 'Vegan';
         getMenu(category);
         break;
-      case "pasta":
-        menuItemsContainer.innerHTML = "";
-        category = "Pasta";
+      case 'pasta':
+        menuItemsContainer.innerHTML = '';
+        category = 'Pasta';
         getMenu(category);
         break;
-      case "seafood":
-        menuItemsContainer.innerHTML = "";
-        category = "Seafood";
+      case 'seafood':
+        menuItemsContainer.innerHTML = '';
+        category = 'Seafood';
         getMenu(category);
         break;
-      case "chicken":
-        menuItemsContainer.innerHTML = "";
-        category = "Chicken";
+      case 'chicken':
+        menuItemsContainer.innerHTML = '';
+        category = 'Chicken';
         getMenu(category);
         break;
-      case "breakfast":
-        menuItemsContainer.innerHTML = "";
-        category = "Breakfast";
+      case 'breakfast':
+        menuItemsContainer.innerHTML = '';
+        category = 'Breakfast';
         getMenu(category);
         break;
-      case "starter":
-        menuItemsContainer.innerHTML = "";
-        category = "Starter";
+      case 'starter':
+        menuItemsContainer.innerHTML = '';
+        category = 'Starter';
         getMenu(category);
         break;
-      case "side":
-        menuItemsContainer.innerHTML = "";
-        category = "Side";
+      case 'side':
+        menuItemsContainer.innerHTML = '';
+        category = 'Side';
         getMenu(category);
         break;
-      case "vegetarian":
-        menuItemsContainer.innerHTML = "";
-        category = "Vegetarian";
+      case 'vegetarian':
+        menuItemsContainer.innerHTML = '';
+        category = 'Vegetarian';
         getMenu(category);
         break;
-      case "dessert":
-        menuItemsContainer.innerHTML = "";
-        category = "Dessert";
+      case 'dessert':
+        menuItemsContainer.innerHTML = '';
+        category = 'Dessert';
         getMenu(category);
         break;
       default:
-        menuItemsContainer.innerHTML = "";
-        category = "Vegan";
+        menuItemsContainer.innerHTML = '';
+        category = 'Vegan';
         getMenu(category);
         break;
     }
