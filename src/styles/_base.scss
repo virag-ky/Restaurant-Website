@@ -22,9 +22,20 @@ body {
   align-items: center;
 }
 
+@mixin media-md {
+  @media (min-width: 600px) {
+    @content; }
+}
+
 @mixin section-bg {
   background: url('../images/section_bg2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
+  @include media-md {
+    background: url('../images/section_bg4.jpg');
+    background-size: cover;
+    background-position: right;
+  }
 }

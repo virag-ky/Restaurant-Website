@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     switch (e.target.id) {
       case 'home':
         homePage.classList.remove('hide');
-        navBar.classList.add('hide');
+        navBar.style.visibility = 'hidden';
         exitBtn.classList.add('hide');
         hamburgerMenu.classList.remove('hide');
         if (document.getElementById('contact-page')) {
@@ -26,26 +26,35 @@ window.addEventListener('DOMContentLoaded', () => {
         } else if (document.getElementById('menu-section')) {
           document.getElementById('menu-section').remove();
         }
+        if (window.innerWidth > 600) {
+          navBar.style.visibility = 'visible';
+        }
         break;
       case 'menu':
         createMenuSection();
-        getMenu('Vegan');
-        homePage.classList.add('hide');
-        navBar.classList.add('hide');
+        navBar.style.visibility = 'hidden';
         exitBtn.classList.add('hide');
         hamburgerMenu.classList.remove('hide');
+        getMenu('Vegan');
+        homePage.classList.add('hide');
         if (document.getElementById('contact-page')) {
           document.getElementById('contact-page').remove();
+        }
+        if (window.innerWidth > 600) {
+          navBar.style.visibility = 'visible';
         }
         break;
       case 'contact':
         createContactPage();
-        homePage.classList.add('hide');
-        navBar.classList.add('hide');
+        navBar.style.visibility = 'hidden';
         exitBtn.classList.add('hide');
         hamburgerMenu.classList.remove('hide');
+        homePage.classList.add('hide');
         if (document.getElementById('menu-section')) {
           document.getElementById('menu-section').remove();
+        }
+        if (window.innerWidth > 600) {
+          navBar.style.visibility = 'visible';
         }
         break;
       default:
