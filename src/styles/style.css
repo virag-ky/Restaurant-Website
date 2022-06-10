@@ -152,6 +152,15 @@ i.fa-times {
   }
 }
 
+@media (min-width: 901px) {
+  #content {
+    background: url("../images/section_bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+}
+
 section#home-page {
   background: url("../images/section_bg5.jpg");
   background-repeat: no-repeat;
@@ -305,6 +314,18 @@ section#menu-section #menu-items {
   }
 }
 
+@media (min-width: 901px) {
+  section#menu-section #menu-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    position: absolute;
+    right: 1%;
+    top: 25%;
+  }
+}
+
 section#menu-section #menu-items .meals {
   width: 280px;
   height: 280px;
@@ -385,7 +406,7 @@ section#menu-section #menu-items .meals:hover .blur-div {
   visibility: visible;
   position: absolute;
   top: 0;
-  background: rgba(230, 184, 146, 0.8);
+  background: rgba(175, 168, 157, 0.8);
   height: 100%;
   width: 100%;
   border-radius: 20px;

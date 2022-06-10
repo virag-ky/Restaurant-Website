@@ -92,6 +92,13 @@ i.fa-times {
   @include section-bg;
 
   overflow: scroll;
+
+  @include media-lg {
+    background: url('../images/section_bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
 }
 
 section#home-page {
@@ -220,6 +227,14 @@ section#menu-section {
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @include media-lg {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: absolute;
+      right: 1%;
+      top: 25%;
+    }
+
     .meals {
       width: 280px;
       height: 280px;
@@ -292,7 +307,7 @@ section#menu-section {
           visibility: visible;
           position: absolute;
           top: 0;
-          background: rgba(230, 184, 146, 0.8);
+          background: rgba(175, 168, 157, 0.8);
           height: 100%;
           width: 100%;
           border-radius: 20px;
