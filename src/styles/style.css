@@ -37,7 +37,7 @@ nav {
   visibility: hidden;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   nav {
     visibility: visible;
     height: 50px;
@@ -68,7 +68,7 @@ nav ul {
   gap: 50px;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   nav ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -105,7 +105,7 @@ i.fa-bars, i.fa-times {
   font-size: 2rem;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   i.fa-bars, i.fa-times {
     display: none;
   }
@@ -123,7 +123,7 @@ i.fa-times {
   z-index: 99;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   i.fa-times {
     display: none;
   }
@@ -144,7 +144,7 @@ i.fa-times {
   overflow: scroll;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   #content {
     background: url("../images/section_bg4.jpg");
     background-size: cover;
@@ -186,7 +186,7 @@ section#home-page h1 {
   font-family: "Vollkorn", serif;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   section#home-page h1 {
     font-size: 4rem;
   }
@@ -206,7 +206,7 @@ section#home-page p#welcome {
   width: 90%;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   section#home-page p#welcome {
     font-size: 1.6rem;
   }
@@ -305,7 +305,7 @@ section#menu-section #menu-items {
   margin-top: 50px;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   section#menu-section #menu-items {
     display: -ms-grid;
     display: grid;
@@ -506,7 +506,7 @@ section#contact-page input {
   width: 70%;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   section#contact-page input {
     width: 50%;
   }
@@ -593,7 +593,7 @@ section#contact-page ul#social-icons {
   padding-top: 20px;
 }
 
-@media (min-width: 600px) and (max-width: 900) {
+@media (min-width: 600px) and (max-width: 900px) {
   section#contact-page ul#social-icons {
     width: 30%;
   }

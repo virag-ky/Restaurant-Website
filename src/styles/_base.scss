@@ -23,13 +23,14 @@ body {
 }
 
 @mixin media-md {
-  @media (min-width: 600px) and (max-width: 900) {
-    @content; }
+  @media (min-width: 600px) and (max-width: 900px) {
+    @content;
+  }
 }
 
-@mixin  media-lg {
+@mixin media-lg {
   @media (min-width: 901px) {
-    @content
+    @content;
   }
 }
 
