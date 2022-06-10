@@ -439,6 +439,13 @@ section#contact-page h2 {
   font-weight: normal;
 }
 
+@media (min-width: 901px) {
+  section#contact-page h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+}
+
 section#contact-page ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -459,6 +466,12 @@ section#contact-page li {
   list-style: none;
   margin-bottom: 20px;
   font-size: 1.2rem;
+}
+
+@media (min-width: 901px) {
+  section#contact-page li {
+    font-size: 1.5rem;
+  }
 }
 
 section#contact-page li span {
@@ -499,6 +512,13 @@ section#contact-page input {
   }
 }
 
+@media (min-width: 901px) {
+  section#contact-page input {
+    width: 20%;
+    font-size: 1.2rem;
+  }
+}
+
 section#contact-page button {
   border: none;
   background: #ff5e00;
@@ -508,9 +528,16 @@ section#contact-page button {
   font-weight: 700;
 }
 
+@media (min-width: 901px) {
+  section#contact-page button {
+    font-size: 1.2rem;
+  }
+}
+
 section#contact-page button:hover {
   cursor: pointer;
   background: #e6b892;
+  outline: none;
 }
 
 section#contact-page footer {
@@ -537,8 +564,21 @@ section#contact-page #slogan h2 {
   font-size: 2.6rem;
 }
 
+@media (min-width: 901px) {
+  section#contact-page #slogan h2 {
+    font-size: 3.5rem;
+  }
+}
+
 section#contact-page #slogan p {
   font-style: italic;
+}
+
+@media (min-width: 901px) {
+  section#contact-page #slogan p {
+    font-size: 1.5rem;
+    margin-bottom: 100px;
+  }
 }
 
 section#contact-page ul#social-icons {
@@ -556,6 +596,12 @@ section#contact-page ul#social-icons {
 @media (min-width: 600px) and (max-width: 900) {
   section#contact-page ul#social-icons {
     width: 30%;
+  }
+}
+
+@media (min-width: 901px) {
+  section#contact-page ul#social-icons {
+    width: 20%;
   }
 }
 

@@ -329,6 +329,11 @@ section#contact-page {
     font-family: $font2;
     font-size: 2.2rem;
     font-weight: normal;
+
+    @include media-lg {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
   }
 
   ul {
@@ -341,6 +346,10 @@ section#contact-page {
     list-style: none;
     margin-bottom: 20px;
     font-size: 1.2rem;
+
+    @include media-lg {
+      font-size: 1.5rem;
+    }
 
     span {
       color: $base_color1;
@@ -367,6 +376,11 @@ section#contact-page {
     @include media-md {
       width: 50%;
     }
+
+    @include media-lg {
+      width: 20%;
+      font-size: 1.2rem;
+    }
   }
 
   button {
@@ -377,9 +391,14 @@ section#contact-page {
     color: #fff;
     font-weight: 700;
 
+    @include media-lg {
+      font-size: 1.2rem;
+    }
+
     &:hover {
       cursor: pointer;
       background: rgb(230, 184, 146);
+      outline: none;
     }
   }
 
@@ -396,10 +415,19 @@ section#contact-page {
     h2 {
       color: $base_color1;
       font-size: 2.6rem;
+
+      @include media-lg {
+        font-size: 3.5rem;
+      }
     }
 
     p {
       font-style: italic;
+
+      @include media-lg {
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+      }
     }
   }
 
@@ -411,6 +439,10 @@ section#contact-page {
 
     @include media-md {
       width: 30%;
+    }
+
+    @include media-lg {
+      width: 20%;
     }
 
     li {
