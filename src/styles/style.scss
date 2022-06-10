@@ -21,6 +21,11 @@ nav {
     height: 50px;
   }
 
+  @include media-lg {
+    visibility: visible;
+    height: 50px;
+  }
+
 
   ul {
     @include center;
@@ -30,6 +35,11 @@ nav {
 
     @include media-md {
       flex-direction: row;
+    }
+
+    @include media-lg {
+      flex-direction: row;
+      gap: 100px;
     }
 
     li {
@@ -54,6 +64,10 @@ i.fa-bars {
   @include media-md {
     display: none;
   }
+
+  @include media-lg {
+    display: none;
+  }
 }
 
 i.fa-times {
@@ -66,6 +80,10 @@ i.fa-times {
   @include media-md {
     display: none;
   }
+
+  @include media-lg {
+    display: none;
+  }
 }
 
 #content {
@@ -74,6 +92,13 @@ i.fa-times {
   @include section-bg;
 
   overflow: scroll;
+
+  @include media-lg {
+    background: url('../images/section_bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
 }
 
 section#home-page {
@@ -84,6 +109,12 @@ section#home-page {
   height: 100%;
   padding: 25px;
 
+  @include media-lg {
+    background: url('../images/section_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   h1 {
     position: absolute;
     top: 20%;
@@ -93,6 +124,10 @@ section#home-page {
 
     @include media-md {
       font-size: 4rem;
+    }
+
+    @include media-lg {
+      font-size: 6rem;
     }
   }
 
@@ -105,6 +140,12 @@ section#home-page {
 
     @include media-md {
       font-size: 1.6rem;
+    }
+
+    @include media-lg {
+      font-size: 2rem;
+      width: 45%;
+      top: 35%;
     }
   }
 }
@@ -186,6 +227,14 @@ section#menu-section {
       grid-template-columns: repeat(2, 1fr);
     }
 
+    @include media-lg {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: absolute;
+      right: 1%;
+      top: 25%;
+    }
+
     .meals {
       width: 280px;
       height: 280px;
@@ -258,7 +307,7 @@ section#menu-section {
           visibility: visible;
           position: absolute;
           top: 0;
-          background: rgba(230, 184, 146, 0.8);
+          background: rgba(175, 168, 157, 0.8);
           height: 100%;
           width: 100%;
           border-radius: 20px;
@@ -280,6 +329,11 @@ section#contact-page {
     font-family: $font2;
     font-size: 2.2rem;
     font-weight: normal;
+
+    @include media-lg {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
   }
 
   ul {
@@ -292,6 +346,10 @@ section#contact-page {
     list-style: none;
     margin-bottom: 20px;
     font-size: 1.2rem;
+
+    @include media-lg {
+      font-size: 1.5rem;
+    }
 
     span {
       color: $base_color1;
@@ -318,6 +376,11 @@ section#contact-page {
     @include media-md {
       width: 50%;
     }
+
+    @include media-lg {
+      width: 20%;
+      font-size: 1.2rem;
+    }
   }
 
   button {
@@ -328,9 +391,14 @@ section#contact-page {
     color: #fff;
     font-weight: 700;
 
+    @include media-lg {
+      font-size: 1.2rem;
+    }
+
     &:hover {
       cursor: pointer;
       background: rgb(230, 184, 146);
+      outline: none;
     }
   }
 
@@ -347,10 +415,19 @@ section#contact-page {
     h2 {
       color: $base_color1;
       font-size: 2.6rem;
+
+      @include media-lg {
+        font-size: 3.5rem;
+      }
     }
 
     p {
       font-style: italic;
+
+      @include media-lg {
+        font-size: 1.5rem;
+        margin-bottom: 100px;
+      }
     }
   }
 
@@ -362,6 +439,10 @@ section#contact-page {
 
     @include media-md {
       width: 30%;
+    }
+
+    @include media-lg {
+      width: 20%;
     }
 
     li {
