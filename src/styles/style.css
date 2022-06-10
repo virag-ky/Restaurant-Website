@@ -34,6 +34,21 @@ nav {
   height: 100vh;
   padding: 20px;
   z-index: 99;
+  visibility: hidden;
+}
+
+@media (min-width: 600px) and (max-width: 900) {
+  nav {
+    visibility: visible;
+    height: 50px;
+  }
+}
+
+@media (min-width: 901px) {
+  nav {
+    visibility: visible;
+    height: 50px;
+  }
 }
 
 nav ul {
@@ -53,6 +68,25 @@ nav ul {
   gap: 50px;
 }
 
+@media (min-width: 600px) and (max-width: 900) {
+  nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 901px) {
+  nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 100px;
+  }
+}
+
 nav ul li {
   list-style: none;
   font-size: 1.4rem;
@@ -61,6 +95,7 @@ nav ul li {
 
 nav ul li:hover {
   color: #ff5e00;
+  cursor: pointer;
 }
 
 i.fa-bars, i.fa-times {
@@ -70,14 +105,51 @@ i.fa-bars, i.fa-times {
   font-size: 2rem;
 }
 
+@media (min-width: 600px) and (max-width: 900) {
+  i.fa-bars, i.fa-times {
+    display: none;
+  }
+}
+
+@media (min-width: 901px) {
+  i.fa-bars, i.fa-times {
+    display: none;
+  }
+}
+
 i.fa-times {
   font-size: 1.8rem;
   color: #ff5e00;
   z-index: 99;
 }
 
+@media (min-width: 600px) and (max-width: 900) {
+  i.fa-times {
+    display: none;
+  }
+}
+
+@media (min-width: 901px) {
+  i.fa-times {
+    display: none;
+  }
+}
+
 #content {
   height: 100vh;
+  background: url("../images/section_bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
+@media (min-width: 600px) and (max-width: 900) {
+  #content {
+    background: url("../images/section_bg4.jpg");
+    background-size: cover;
+    background-position: right;
+  }
 }
 
 section#home-page {
@@ -89,6 +161,14 @@ section#home-page {
   padding: 25px;
 }
 
+@media (min-width: 901px) {
+  section#home-page {
+    background: url("../images/section_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 section#home-page h1 {
   position: absolute;
   top: 20%;
@@ -97,12 +177,38 @@ section#home-page h1 {
   font-family: "Vollkorn", serif;
 }
 
+@media (min-width: 600px) and (max-width: 900) {
+  section#home-page h1 {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 901px) {
+  section#home-page h1 {
+    font-size: 6rem;
+  }
+}
+
 section#home-page p#welcome {
   position: absolute;
   top: 30%;
   font-size: 1.2rem;
   font-style: italic;
   width: 90%;
+}
+
+@media (min-width: 600px) and (max-width: 900) {
+  section#home-page p#welcome {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 901px) {
+  section#home-page p#welcome {
+    font-size: 2rem;
+    width: 45%;
+    top: 35%;
+  }
 }
 
 section#menu-section {
@@ -119,11 +225,7 @@ section#menu-section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 80px 0;
-  background: url("../images/section_bg2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  padding: 100px 0;
 }
 
 section#menu-section h2 {
@@ -161,7 +263,7 @@ section#menu-section #selection select {
   box-sizing: border-box;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, #ff5e00 50%), linear-gradient(135deg, #ff5e00 50%, transparent 50%), linear-gradient(to right, #e6b892, #e6b892);
+  background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-gradient(135deg, #fff 50%, transparent 50%), linear-gradient(to right, #ff5e00, #ff5e00);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
   background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
   background-repeat: no-repeat;
@@ -192,6 +294,15 @@ section#menu-section #menu-items {
           flex-direction: column;
   gap: 25px;
   margin-top: 50px;
+}
+
+@media (min-width: 600px) and (max-width: 900) {
+  section#menu-section #menu-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 section#menu-section #menu-items .meals {
@@ -278,5 +389,176 @@ section#menu-section #menu-items .meals:hover .blur-div {
   height: 100%;
   width: 100%;
   border-radius: 20px;
+}
+
+section#contact-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 80px;
+  padding: 100px 0 50px 0;
+}
+
+section#contact-page h2 {
+  font-family: "Vollkorn", serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+}
+
+section#contact-page ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section#contact-page li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+section#contact-page li span {
+  color: #ff5e00;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+section#contact-page div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+section#contact-page input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: thin solid #ff5e00;
+  margin: 30px 0;
+  width: 70%;
+}
+
+@media (min-width: 600px) and (max-width: 900) {
+  section#contact-page input {
+    width: 50%;
+  }
+}
+
+section#contact-page button {
+  border: none;
+  background: #ff5e00;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+}
+
+section#contact-page button:hover {
+  cursor: pointer;
+  background: #e6b892;
+}
+
+section#contact-page footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-top: thin solid #858484;
+  width: 100%;
+  padding-top: 15px;
+}
+
+section#contact-page #slogan h2 {
+  color: #ff5e00;
+  font-size: 2.6rem;
+}
+
+section#contact-page #slogan p {
+  font-style: italic;
+}
+
+section#contact-page ul#social-icons {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  padding-top: 20px;
+}
+
+@media (min-width: 600px) and (max-width: 900) {
+  section#contact-page ul#social-icons {
+    width: 30%;
+  }
+}
+
+section#contact-page ul#social-icons li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  border: thin solid #ff5e00;
+  width: 40px;
+  height: 40px;
+}
+
+section#contact-page ul#social-icons li i {
+  color: #ff5e00;
+}
+
+section#contact-page ul#social-icons li i:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

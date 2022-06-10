@@ -21,6 +21,11 @@ nav {
     height: 50px;
   }
 
+  @include media-lg {
+    visibility: visible;
+    height: 50px;
+  }
+
 
   ul {
     @include center;
@@ -30,6 +35,11 @@ nav {
 
     @include media-md {
       flex-direction: row;
+    }
+
+    @include media-lg {
+      flex-direction: row;
+      gap: 100px;
     }
 
     li {
@@ -54,6 +64,10 @@ i.fa-bars {
   @include media-md {
     display: none;
   }
+
+  @include media-lg {
+    display: none;
+  }
 }
 
 i.fa-times {
@@ -64,6 +78,10 @@ i.fa-times {
   z-index: 99;
 
   @include media-md {
+    display: none;
+  }
+
+  @include media-lg {
     display: none;
   }
 }
@@ -84,6 +102,12 @@ section#home-page {
   height: 100%;
   padding: 25px;
 
+  @include media-lg {
+    background: url('../images/section_bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
   h1 {
     position: absolute;
     top: 20%;
@@ -93,6 +117,10 @@ section#home-page {
 
     @include media-md {
       font-size: 4rem;
+    }
+
+    @include media-lg {
+      font-size: 6rem;
     }
   }
 
@@ -105,6 +133,12 @@ section#home-page {
 
     @include media-md {
       font-size: 1.6rem;
+    }
+
+    @include media-lg {
+      font-size: 2rem;
+      width: 45%;
+      top: 35%;
     }
   }
 }
