@@ -118,7 +118,8 @@ section#home-page {
     position: absolute;
     top: 20%;
     font-size: 2.8rem;
-    color: $base_color1;
+    color: #f47830;
+    text-shadow: 5px 0 5px #fff;
     font-family: $font2;
 
     @include media-md {
